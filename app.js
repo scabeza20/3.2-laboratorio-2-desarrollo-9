@@ -38,13 +38,13 @@ function main() {
   
   function objectDemo(){
     const car = { myCar: "Accent", 
-                dadCar: "Accent",
+                dadCar: "Rio",
                 momCar: "Frontier",
-                broCar: "Rio"};
+                broCar: "Picanto"};
 
-                carSpan.innerText = `El objeto es: ${car}`;            
-                console.log(car);
-                
+  carSpan.innerText = `El objeto es: ${JSON.stringify(car)}`;                
+  //carSpan.innerText = `El objeto es: ${Object.entries(car)}`;                
+           
   }
   carBtn.addEventListener("click", () => objectDemo());
 }
