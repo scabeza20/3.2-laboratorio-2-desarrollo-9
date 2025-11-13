@@ -1,6 +1,13 @@
 :root{
 
     color-scheme: light dark;
-    color: light-dark(#000000, #ffffff);
-    background-color: light-dark(#ffffff, #000000);
-}
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --bg-light: #ffffff;
+    --bg-dark: #242424;
+    }
+
+body{
+    color: light-dark(var(--color-dark), var(--color-light));
+    background-color: light-dark(var(--bg-light), var(--bg-dark));
+    }
