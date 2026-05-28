@@ -6,9 +6,8 @@ function main() {
     var num2 = document.getElementById("numero2").value;
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
-    resultado.innerText = `La suma es: ${num1 + num2} \nLa resta es: ${
-      num1 - num2
-    } \nLa multiplicación es: ${num1 * num2} \nLa división es: ${num1 / num2}`;
+    resultado.innerText = `La suma es: ${num1 + num2} \nLa resta es: ${num1 - num2
+      } \nLa multiplicación es: ${num1 * num2} \nLa división es: ${num1 / num2}`;
   }
   operaciones.addEventListener("click", () => calOperations());
 
@@ -32,19 +31,22 @@ function main() {
   }
   typeBtn.addEventListener("click", () => typeCheck());
 
-  
+
   let carBtn = document.getElementById("carBtn");
   let carSpan = document.getElementById("carSpan");
-  
-  function objectDemo(){
-    const car = { myCar: "Accent", 
-                dadCar: "Rio",
-                momCar: "Frontier",
-                broCar: "Picanto"};
 
-  carSpan.innerText = `El objeto es: ${JSON.stringify(car)}`;                
-  //carSpan.innerText = `El objeto es: ${Object.entries(car)}`;                
-           
+  function objectDemo() {
+    const car = {
+      myCar: "Accent",
+      dadCar: "Rio",
+      momCar: "Frontier",
+      broCar: "Picanto"
+    }
+
+    carSpan.innerText = Object.entries(car)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join("\n");
+
   }
   carBtn.addEventListener("click", () => objectDemo());
 }
